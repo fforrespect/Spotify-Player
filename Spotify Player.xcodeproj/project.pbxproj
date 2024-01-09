@@ -11,6 +11,8 @@
 		AF3857D92B4CB0FA0096432F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3857D82B4CB0FA0096432F /* ContentView.swift */; };
 		AF3857DB2B4CB0FB0096432F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3857DA2B4CB0FB0096432F /* Assets.xcassets */; };
 		AF3857DE2B4CB0FB0096432F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3857DD2B4CB0FB0096432F /* Preview Assets.xcassets */; };
+		AF3857E92B4D850C0096432F /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF3857E82B4D850C0096432F /* OAuthSwift */; };
+		AF3857EB2B4D85F20096432F /* SpotifyAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3857EA2B4D85F20096432F /* SpotifyAuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		AF3857DA2B4CB0FB0096432F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF3857DD2B4CB0FB0096432F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF3857DF2B4CB0FB0096432F /* Spotify_Player.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotify_Player.entitlements; sourceTree = "<group>"; };
+		AF3857EA2B4D85F20096432F /* SpotifyAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3857E92B4D850C0096432F /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,10 +56,11 @@
 		AF3857D52B4CB0FA0096432F /* Spotify Player */ = {
 			isa = PBXGroup;
 			children = (
-				AF3857D62B4CB0FA0096432F /* Spotify_PlayerApp.swift */,
-				AF3857D82B4CB0FA0096432F /* ContentView.swift */,
-				AF3857DA2B4CB0FB0096432F /* Assets.xcassets */,
 				AF3857DF2B4CB0FB0096432F /* Spotify_Player.entitlements */,
+				AF3857D82B4CB0FA0096432F /* ContentView.swift */,
+				AF3857D62B4CB0FA0096432F /* Spotify_PlayerApp.swift */,
+				AF3857EA2B4D85F20096432F /* SpotifyAuthManager.swift */,
+				AF3857DA2B4CB0FB0096432F /* Assets.xcassets */,
 				AF3857DC2B4CB0FB0096432F /* Preview Content */,
 			);
 			path = "Spotify Player";
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = "Spotify Player";
+			packageProductDependencies = (
+				AF3857E82B4D850C0096432F /* OAuthSwift */,
+			);
 			productName = "Spotify Player";
 			productReference = AF3857D32B4CB0FA0096432F /* Spotify Player.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = AF3857CA2B4CB0FA0096432F;
+			packageReferences = (
+				AF3857E72B4D850C0096432F /* XCRemoteSwiftPackageReference "OAuthSwift" */,
+			);
 			productRefGroup = AF3857D42B4CB0FA0096432F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3857EB2B4D85F20096432F /* SpotifyAuthManager.swift in Sources */,
 				AF3857D92B4CB0FA0096432F /* ContentView.swift in Sources */,
 				AF3857D72B4CB0FA0096432F /* Spotify_PlayerApp.swift in Sources */,
 			);
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF3857E72B4D850C0096432F /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF3857E82B4D850C0096432F /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3857E72B4D850C0096432F /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF3857CB2B4CB0FA0096432F /* Project object */;
 }
